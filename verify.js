@@ -238,7 +238,7 @@ class SecurityVerification {
                 // Optional: Redirect after successful verification
                 setTimeout(() => {
                     // Replace with your target URL
-                    window.location.href = "chat"; 
+                    window.location.href = "chat.html"; 
                 }, 2000);
             } else {
                 throw new Error('Verification failed');
