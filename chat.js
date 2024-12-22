@@ -596,3 +596,63 @@ const peer = new Peer();
         
 
         loadUserData();
+
+
+
+/*================================================new records====================================================*/
+const alertPopup2 = document.getElementById('alertPopup2');
+const overlay2 = document.getElementById('overlay2');
+
+// Function to show alert and hide content
+function showAlert2() {
+    alertPopup2.style.display = 'block';
+    overlay2.style.display = 'block';
+    messages.style.display = 'none'; // Hide the content
+
+    // Hide the alert and content after 5 seconds
+    setTimeout(() => {
+        alertPopup2.style.display = 'none';
+        overlay2.style.display = 'none';
+        messages.style.display = 'block'; // Show the content again
+    }, 1000); // Adjusted timeout value to 1000ms (1 seconds)
+}
+
+// Track touches
+let touchStartCount = 0;
+
+// When touch starts (first touch), reset count
+document.addEventListener('touchstart', (e) => {
+    touchStartCount = e.touches.length;
+    console.log('touchstart - Touch count:', touchStartCount); // Debugging log
+    if (touchStartCount > 2) {
+        console.log('More than 2 touches, triggering alert');
+        showAlert2(); // Trigger alert if more than 2 touches
+    }
+});
+
+// When touch moves, check the number of active touches
+document.addEventListener('touchmove', (e) => {
+    touchStartCount = e.touches.length;
+    console.log('touchmove - Touch count:', touchStartCount); // Debugging log
+    if (touchStartCount > 2) {
+        console.log('More than 2 touches, triggering alert');
+        showAlert2(); // Trigger alert if more than 2 touches
+    }
+});
+
+// When touch ends, reset the touch count
+document.addEventListener('touchend', () => {
+    touchStartCount = 0;
+    console.log('touchend - Touch count reset:', touchStartCount); // Debugging log
+});
+
+// Disable right-click (context menu)
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault(); // Disable right-click menu
+    showAlert2();
+});
+
+// Prevent text selection
+document.addEventListener('selectstart', (e) => {
+    e.preventDefault(); // Prevent text selection
+});
