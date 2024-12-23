@@ -646,11 +646,11 @@ document.addEventListener('touchend', () => {
     console.log('touchend - Touch count reset:', touchStartCount); // Debugging log
 });
 
-// Disable right-click (context menu)
-document.addEventListener('contextmenu', (e) => {
-    e.preventDefault(); // Disable right-click menu
-    showAlert2();
-});
+// // Disable right-click (context menu)
+// document.addEventListener('contextmenu', (e) => {
+//     e.preventDefault(); // Disable right-click menu
+//     showAlert2();
+// });
 
 // Prevent text selection
 document.addEventListener('selectstart', (e) => {
