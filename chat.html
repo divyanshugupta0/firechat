@@ -17,27 +17,32 @@
                 <img src="/api/placeholder/40/40" alt="Profile" id="profile-image">
             </div>
             <div class="head">
-            <h1>FireFly-NOX</Fire-NOX></h1></div>
-            <p>Your Connection ID: <span id="peer-id"></span><span class="copy-icon" onclick="copyPeerId()"> <button class="copybtn-style">  📋</button></span></p>
-            <div class="peer-input">
-            <input type="text" id="peer-id-input"placeholder="Enter Peer ID to connect">
+            <h1 class="h1">FireFly-NOX</FireFly-NOX></h1></div>
+            <p><span class="connectid">Your Connection ID:</span> <span id="peer-id"></span><span class="copy-icon" onclick="copyPeerId()"> <button class="copybtn-style"><i class="fa-solid fa-copy"> Copy</i></button></span></p>
+            <div class="peerinput" id="peerinput">
+            <input type="text" id="peer-id-input"placeholder="Enter Connection ID to connect">
+            <button class="paste-btn" onclick="pastePeerId()" title="Paste Connection ID"><i class="fa-regular fa-paste"></i></button>
             <button onclick="connectToPeer()">Connect</button></div>
             <button id="exit-chat-btn" onclick="exitChat()">Exit Chat</button>
         </div>
         <div class="chat-body">
             <div class="user-list" id="user-list">
-                <h3>Connected Users</h3>
+                <h3 class="connected-users">Connected Users:</h3>
                 <div class="close-connect">
                 <button onclick="toggleMenu()" class="close">X</button>
             </div>
             </div>
             <div class="chat-messages" id="messages"></div>
         </div>
-        <div class="chat-input">
-            <input type="text" id="message-input" placeholder="Type your message..." autofocus>
+        <div class="message-area" id="messageArea">
+            <div class="camera" onclick="showPopup3('Feature Coming Soon..........!(With Video Calling..)')"><i class="fa-solid fa-camera"></i></div>
+            <div class="input-div">
+                <textarea id="message-input" placeholder="Type your message..." autofocus></textarea>
+                <div id="hiddenDiv"></div>
+            </div>
             <label for="file-input" class="attachment-icon">📎</label>
-            <input type="file" id="file-input" accept="image/*,video/*">
-            <button onclick="sendMessage()">Send</button>
+            <input type="file" id="file-input" accept="image/*,video/*" multiple>
+            <button class="send" onclick="sendMessage()" id="sendButton"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 
@@ -71,13 +76,17 @@
             </div>
         </div>
         <h4>Message Box Colors:</h4>
-        <input type="color" id="sent-color" value="#4a90e2">
+        <input type="color" id="sent-color" value="#FFD662FF">
         <label for="sent-color">Sent Messages</label><br>
-        <input type="color" id="received-color" value="#50c878">
+        <input type="color" id="received-color" value="#00539CFF">
         <label for="received-color">Received Messages</label>
+        <button type="reset" onclick="resetColors()">Reset</button>
         <button onclick="updateProfile()">Update Profile</button>
     </div>
-    <!--=======================================================exp...-->
+    <div id="notification-success" class="notification-success"></div>
+    <div id="notification-error" class="notification-error"></div>
+    <div class="header"></div>
+    <!--=======================================================exp...====================================================-->
     <div class="overlay2" id="overlay2"></div>
     <div class="alert-popup2" id="alertPopup2">
         ⚠️ Warning: Screenshot or suspicious activity detected!
@@ -94,5 +103,6 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 <script src="chat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.4.7/peerjs.min.js"></script>
 </body>
 </html> 
