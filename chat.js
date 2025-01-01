@@ -52,10 +52,12 @@ const peer = new Peer();
 
         const wallpaperOptions = [
             { name: 'Default', image: 'wall3.jpg' },
-            { name: 'Nature', image: 'wall2.jpg' },
-            { name: 'City', image: 'wall1.jpg' },
-            { name: 'Abstract', image: 'abstract-bg.jpg' },
-            { name: 'Space', image: 'space-bg.jpg' },
+            { name: 'Nature', image: 'wall1.jpg' },
+            { name: 'City', image: 'wall2.jpg' },
+            { name: 'Abstract', image: 'wall4.jpg' },
+            { name: 'Space', image: 'wall6.jpg' },
+            { name: 'Space', image: 'wall7.jpg' },
+            { name: 'Space', image: 'wall5.avif' },
         ];
 
         const wallpaperContainer = document.getElementById('wallpaper-options');
