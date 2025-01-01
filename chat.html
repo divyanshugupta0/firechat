@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.4.7/peerjs.min.js"></script>
     <link rel="icon" href="chat.png" type="image/x-icon">
 <link rel="stylesheet" href="chat.css" />
+    <link rel="stylesheet" href="https://img.icons8.com/ios/50/paste.png">
 </head>
 <body oncontextmenu="return false;">
     <div class="chat-app">
@@ -21,7 +22,7 @@
             <p><span class="connectid">Your Connection ID:</span> <span id="peer-id"></span><span class="copy-icon" onclick="copyPeerId()"> <button class="copybtn-style"><i class="fa-solid fa-copy"> Copy</i></button></span></p>
             <div class="peerinput" id="peerinput">
             <input type="text" id="peer-id-input"placeholder="Enter Connection ID to connect">
-            <button class="paste-btn" onclick="pastePeerId()" title="Paste Connection ID"><i class="fa-regular fa-paste"></i></button>
+            <button class="paste-btn" onclick="pastePeerId()" title="Paste Connection ID"><img width="13" height="13" src="https://img.icons8.com/ios/50/paste.png" alt="paste"/></button>
             <button onclick="connectToPeer()">Connect</button></div>
             <button id="exit-chat-btn" onclick="exitChat()">Exit Chat</button>
         </div>
