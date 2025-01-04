@@ -36,7 +36,7 @@
             background-color: white;
         }
         .material-icons {
-            color: #000000; /* Change color */
+            color: white; /* Change color */
             font-size: 12px; /* Change size */
             cursor: pointer; /* Add pointer cursor on hover */
          }
