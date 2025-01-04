@@ -23,6 +23,7 @@
             border-radius: 70px;
             border: 2px solid white;
             background-color: transparent;
+            font-size: 12px;
             height: 25px;
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,6 +34,11 @@
             border: 2px solid black;
             background-color: white;
         }
+        .material-icons {
+            color: #000000; /* Change color */
+            font-size: 12px; /* Change size */
+            cursor: pointer; /* Add pointer cursor on hover */
+         }
         .chat-app {
             width: 100%;
             height: 100vh;
