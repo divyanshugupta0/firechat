@@ -19,10 +19,10 @@
         .head{
             text-align: center;
         }
-.material-icons {
-    font-size: 16px; /* or any size you want */
-    color: #000000;
-}
+         .material-icons {
+            font-size: 16px; /* or any size you want */
+            color: #000000;
+          }
         .copybtn-style{
             border-radius: 70px;
             border: 2px solid white;
@@ -258,7 +258,7 @@
         .attachment-icon {
             position: absolute;
             background-color: #bfb4b488;
-            color: #f8f3f0;
+            color: black;
             border-radius: 100%;
             right: 80px;
             top: 50%;
