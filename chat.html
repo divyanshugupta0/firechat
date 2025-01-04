@@ -9,6 +9,7 @@
     <link rel="icon" href="chat.png" type="image/x-icon">
 <link rel="stylesheet" href="chat.css" />
     <link rel="stylesheet" href="https://img.icons8.com/ios/50/paste.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body oncontextmenu="return false;">
     <div class="chat-app">
@@ -19,7 +20,7 @@
             </div>
             <div class="head">
             <h1 class="h1">FireFly-NOX</FireFly-NOX></h1></div>
-            <p><span class="connectid">Your Connection ID:</span> <span id="peer-id"></span><span class="copy-icon" onclick="copyPeerId()"> <button class="copybtn-style"><i class="fa-solid fa-copy"> Copy</i></button></span></p>
+            <p><span class="connectid">Your Connection ID:</span> <span id="peer-id"></span><span class="copy-icon" onclick="copyPeerId()"> <button class="copybtn-style"><span class="material-icons">content_copy</span> Copy</i></button></span></p>
             <div class="peerinput" id="peerinput">
             <input type="text" id="peer-id-input"placeholder="Enter Connection ID to connect">
             <button class="paste-btn" onclick="pastePeerId()" title="Paste Connection ID"><img width="13" height="13" src="https://img.icons8.com/ios/50/paste.png" alt="paste"/></button>
@@ -36,14 +37,14 @@
             <div class="chat-messages" id="messages"></div>
         </div>
         <div class="message-area" id="messageArea">
-            <div class="camera" onclick="showPopup3('Feature Coming Soon..........!(With Video Calling..)')"><i class="fa-solid fa-camera"></i></div>
+            <div class="camera" onclick="showPopup3('Feature Coming Soon..........!(With Video Calling..)')"><span class="material-icons">camera_alt</span></i></div>
             <div class="input-div">
                 <textarea id="message-input" placeholder="Type your message..." autofocus></textarea>
                 <div id="hiddenDiv"></div>
             </div>
             <label for="file-input" class="attachment-icon">📎</label>
             <input type="file" id="file-input" accept="image/*,video/*" multiple>
-            <button class="send" onclick="sendMessage()" id="sendButton">Send</button>
+            <button class="send" onclick="sendMessage()" id="sendButton"><span class="material-icons">send</span></button>
         </div>
     </div>
 
