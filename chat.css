@@ -19,6 +19,10 @@
         .head{
             text-align: center;
         }
+.material-icons {
+    font-size: 16px; /* or any size you want */
+    color: #000000;
+}
         .copybtn-style{
             border-radius: 70px;
             border: 2px solid white;
@@ -497,6 +501,24 @@
         }
         .establish{
             color: #a31d1d;
+        }
+.establish-cancel{
+            color: #a31d1d;
+            border:2px solid #a31d1d;
+            background: transparent;
+            width: 50%;
+            border-radius: 30px;
+            cursor: pointer;
+            align-items: center;
+            margin-left: 25%;
+        }
+        .establish-cancel:hover{
+            color: white;
+            border:2px solid white;
+            background: #a31d1d;
+            width: 50%;
+            border-radius: 30px;
+            cursor: pointer;
         }
 
         @keyframes spin {
