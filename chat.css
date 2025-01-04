@@ -41,7 +41,7 @@
             cursor: pointer; /* Add pointer cursor on hover */
          }
         .material-icons:hover {
-            color: black;
+            color: wheat;
             font-size: 12px;
             cursor: pointer;
         }
