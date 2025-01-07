@@ -922,11 +922,15 @@ async function pastePeerId() {
         // Validate peer ID
         if (isValidPeerId(cleanText)) {
             document.getElementById('peer-id-input').value = cleanText;
-            showSuccess('✓ Peer ID pasted successfully');
+            showSuccess('✓ Connection ID pasted successfully');
             connectToPeer(cleanText);
             messageInput.focus();
         } else {
-            showError('✗ Invalid Peer ID format');
+                if (isValidPeerId(cleanText)){
+                        showError("✗ You can't paste Your Connection Id!");
+                } else {
+                    showError('✗ Invalid Connection ID');
+                }
         }
     } catch (err) {
         showError('✗ Unable to paste. Please paste manually.');
