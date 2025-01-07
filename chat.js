@@ -918,6 +918,7 @@ async function pastePeerId() {
         // Try to read from clipboard
         const text = await navigator.clipboard.readText();
         const cleanText = text.trim();
+        const ownPeerId2 = document.getElementById('peer-id').textContent;
         
         // Validate peer ID
         if (isValidPeerId(cleanText)) {
@@ -926,7 +927,7 @@ async function pastePeerId() {
             connectToPeer(cleanText);
             messageInput.focus();
         } else {
-                if (isValidPeerId(cleanText)){
+                if (cleanText === ownPeerId2){
                         showError("✗ You can't paste Your Connection Id!");
                 } else {
                     showError('✗ Invalid Connection ID');
